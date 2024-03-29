@@ -75,11 +75,12 @@ func (f *far) parseFAR(farIE *ie.IE, fseid uint64, upf *upf, op operation) error
 
 	f.farID = farID
 
-	action, err := farIE.ApplyAction()
+	actionByte, err := farIE.ApplyAction()
 	if err != nil {
 		return err
 	}
 
+	var action uint8 = actionByte[0]
 	if action == 0 {
 		return ErrInvalidArgument("FAR Action", action)
 	}

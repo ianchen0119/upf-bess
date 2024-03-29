@@ -13,12 +13,12 @@ require (
 	github.com/google/gopacket v1.1.19
 	github.com/grpc-ecosystem/go-grpc-middleware v1.3.0
 	github.com/libp2p/go-reuseport v0.1.0
-	github.com/omec-project/pfcpsim v0.1.0
+	github.com/omec-project/pfcpsim v1.0.0
 	github.com/p4lang/p4runtime v1.3.0
 	github.com/prometheus/client_golang v1.11.1
-	github.com/sirupsen/logrus v1.8.1
-	github.com/stretchr/testify v1.7.0
-	github.com/wmnsk/go-pfcp v0.0.14
+	github.com/sirupsen/logrus v1.9.0
+	github.com/stretchr/testify v1.9.0
+	github.com/wmnsk/go-pfcp v0.0.19
 	google.golang.org/genproto v0.0.0-20230410155749-daa745c078e1
 	google.golang.org/grpc v1.56.3
 	google.golang.org/protobuf v1.33.0
@@ -47,6 +47,6 @@ require (
 	golang.org/x/sys v0.13.0 // indirect
 	golang.org/x/text v0.13.0 // indirect
 	golang.org/x/time v0.0.0-20211116232009-f0f3c7e86c11 // indirect
-	gopkg.in/yaml.v3 v3.0.0 // indirect
+	gopkg.in/yaml.v3 v3.0.1 // indirect
 	gotest.tools/v3 v3.1.0 // indirect
 )

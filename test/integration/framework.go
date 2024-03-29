@@ -4,6 +4,7 @@
 package integration
 
 import (
+	"context"
 	"encoding/json"
 	"errors"
 	"net"
@@ -342,7 +343,9 @@ func setup(t *testing.T, configType uint32) {
 	}
 
 	pfcpClient = pfcpsim.NewPFCPClient("127.0.0.1")
-	err := pfcpClient.ConnectN4("127.0.0.1")
+	ctx, cancel := context.WithCancel(context.Background())
+	defer cancel()
+	err := pfcpClient.ConnectN4(ctx, "127.0.0.1")
 	require.NoErrorf(t, err, "failed to connect to UPF")
 
 	// wait for PFCP Agent to initialize, blocking
